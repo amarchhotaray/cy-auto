@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --headed",
+    "cy:parallel": "cypress-parallel -d cypress/integration/examples/ -t 2 -s test"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "cypress": "^14.1.0"
+  },
+  "dependencies": {
+    "cypress-parallel": "^0.1.7"
   }
 }
